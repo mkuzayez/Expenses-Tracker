@@ -17,7 +17,7 @@ class expense_list extends StatelessWidget {
       shrinkWrap: true,
       itemCount: regestered_expenses.length,
       itemBuilder: (BuildContext ctx, int index) => Slidable(
-        key: ValueKey(ctx),
+        key: ValueKey(regestered_expenses[index]),
         endActionPane: ActionPane(
           motion: const DrawerMotion(),
           children: [
@@ -52,7 +52,6 @@ class expense_list extends StatelessWidget {
         ),
         child: expense_item(
           regestered_expenses[index],
-          key: ValueKey(ctx),
         ),
       ),
     );
